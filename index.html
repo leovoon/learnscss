@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/scss/style.css" />
+    <title>Sass</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Silly Doodles</h1>
+      <span class="burger">☰</span>
+      <ul>
+        <li>About</li>
+        <li>Portfolio</li>
+        <li>Services</li>
+        <li>Blog</li>
+      </ul>
+    </nav>
+
+    <section class="banner">
+      <div class="banner-info">
+      <h1>We Help to Build the Product</h1>
+      <p>Full-service Digital Agency from Amsterdarm that creates different ideas and amazing digital experience.</p>
+      <button>CONTACT US</button>
+    </div>
+      <figure class="banner-image"><img src="/img/silly.png" alt="banner-img"></figure>
+    </section>
+
+    <section class="brand">
+      <p>You are in good company</p>
+      <ul>
+       
+        <li>
+          <img src="/img/tesla.png" alt="brand-logo" />
+        </li>
+        <li>
+          <img src="/img/netflix.png" alt="brand-logo" />
+        </li>
+        <li>
+          <img class="apple" src="/img/apple.png" alt="brand-logo" />
+        </li>
+        <li>
+          <img src="/img/google.png"  alt="brand-logo" />
+        </li>
+        <li>
+          <img src="/img/uber.png" alt="brand-logo" />
+        </li>
+      </ul>
+    </section>
+
+    <script>
+
+  const burger = document.querySelector('.burger');
+  const navList = document.querySelector("nav ul");
+
+  burger.addEventListener('click', () => {
+
+    if (navList.style.display === "none") {
+    navList.style.display = "block";
+  } else {
+    navList.style.display = "none";
+  }
+
+  })
+  
+       
+    </script>
+  </body>
+</html>
