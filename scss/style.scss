@@ -1,32 +1,14 @@
-// Varibles
+@import 'variables.scss';
+@import 'mixins.scss';
 
-// Colors
-$HalfDutchWhite: #fefadb;
-$HalfGray: #766c6f;
-$bodyMargin: auto 6em;
 
-// Media Queries
-$breakpoints: (
-  phone: 640px,
-  tablet: 768px,
-  desktop: 1024px,
-) !default;
-
-// Mixins
-@mixin flexRowCenter {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 0;
+// Small device
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+      @content;
+  }
 }
 
-@mixin flexColumnCenter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin: 0;
-  }
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -45,7 +27,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 980px) {
+  @include sm{
     position: relative;
     
   }
@@ -61,7 +43,7 @@ nav {
     display: flex;
     justify-content: space-around;
     
-    @media only screen and (max-width: 980px) {
+    @include sm {
         @include flexColumnCenter;
         width: 100%;
         position: absolute;
@@ -77,7 +59,7 @@ nav {
     font-weight: 900;
     padding: 0 20px;
 
-    @media only screen and (max-width: 980px) {
+    @include sm{
         background: $HalfGray;
         color: $HalfDutchWhite;
         width: 100%;
@@ -90,7 +72,7 @@ nav {
     display: none;
     padding: 10px;
     transform: translateX(10px);
-    @media only screen and (max-width: 980px) {
+    @include sm{
         display: block;
         
       }
@@ -110,7 +92,7 @@ section.banner {
       margin: 0;
       max-width: 90%;
 
-      @media only screen and (max-width: 980px) {
+      @include sm{
         font-size: 2rem;
       }
     }
@@ -121,7 +103,7 @@ section.banner {
       max-width: 90%;
       margin-top: 30px;
 
-      @media only screen and (max-width: 980px) {
+      @include sm{
         font-size: 14px;
       }
     }
@@ -144,7 +126,7 @@ section.banner {
     @include flexRowCenter;
     width: 50%;
     
-    @media only screen and (max-width: 980px) {
+    @include sm{
       width: 100%;   
     }
 
