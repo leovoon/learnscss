@@ -2,12 +2,6 @@
 @import 'mixins.scss';
 
 
-// Small device
-@mixin sm {
-  @media (max-width: #{$screen-sm-max}) {
-      @content;
-  }
-}
 
 
 * {
