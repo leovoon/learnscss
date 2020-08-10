@@ -1,0 +1,26 @@
+// Mixins
+
+
+@mixin flexRowCenter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+}
+
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+  }
+  
+  
+  
+// Media Queries
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+      @content;
+  }
+}
